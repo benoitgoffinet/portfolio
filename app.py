@@ -87,7 +87,7 @@ with tabs[3]:
         display_image("runappli.png", height=300, caption="Projet 1")
         st.write("Application permettant de faire des prédictions sur des performances en course à pied")
         st.markdown(
-        "[🔗 Accéder à l'application](https://dashboardbenoit-h3grgwekfaa3e2ay.canadacentral-01.azurewebsites.net/)",
+        "[🔗 Accéder à l'application](https://predictioncourse-f2dha0fma0fdazgq.canadacentral-01.azurewebsites.net//)",
          unsafe_allow_html=True
          )
     
