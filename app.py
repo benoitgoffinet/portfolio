@@ -12,19 +12,19 @@ def display_image(image_path, height=300, caption=None):
     wsize = int(float(img.size[0]) * hpercent)
     img_resized = img.resize((wsize, height))
     
-    st.image(img_resized)
+    st.image(img_resized, caption=caption)
 
 
 # Configuration de la page
-st.set_page_config(page_title="Mon Portfolio", layout="wide")
+st.set_page_config(page_title="Mon Portfolio de datascientist", layout="wide")
 
 # --- Onglets ---
-tabs = st.tabs(["Présentation", "Formation", "Compétences", "Projets", "Contact"])
+tabs = st.tabs(["Présentation", "Formation/Expériences", "Compétences", "Projets", "Contact"])
 
 # --- Onglet 1 : Présentation ---
 with tabs[0]:
     st.markdown("<h1 style='text-align: center;'>Bonjour, je m'appelle Benoit Goffinet et je suis Data Scientist</h1>", unsafe_allow_html=True)
-    st.image("benoitgoffinet.png", width=200)
+    st.image("benoitgoffinet.png", caption='image me représentant', width=200)
     st.markdown("""
     Passionné par le sport et la data science, je souhaite partager mon parcours et mes compétences.
     
@@ -49,6 +49,25 @@ with tabs[1]:
       - **Diplôme** : Développeur web junior, 3WS Academy, 2020 
       - **Certifications** : Diplôme de niveau 5 (bac +2)
       """)
+
+    st.header("Expériences")
+    col1, col2 = st.columns(2)
+    with col1:
+      st.write("""
+      - **Poste** : Développeur AS400
+      - **Entreprise** : Notos (Montpellier)
+      - **Date** : 2022-2024
+      - **Langages** : CL, RPGLE, SQL
+      """)
+    with col2:
+      st.write("""
+      - **Poste** : Développeur informatique 
+      - **Entreprise** : Indépendant
+      - **Date** : 2021
+      - **Langages** : HTPL, CSS, JAVASCIPT, PHP, MYSQL
+      - **Portfolio** : http://portfolio.benoitgoffinetportfolio.fr
+      """)
+   
     
 # --- Onglet 3 : Compétences Techniques ---
 with tabs[2]:
@@ -73,7 +92,7 @@ with tabs[3]:
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("<h3 style='text-align: center;'>Dashboard</h3>", unsafe_allow_html=True)
-        display_image("dashboard.png", height=300, caption="Projet 1")
+        display_image("dashboard.png", height=300, caption="Dashboard comparant les modèles VIT et VGG16")
         st.write(
           "Dashboard permettant de comparer les performances des modèles **VIT** "
           "et **VGG16** sur un jeu de données contenant des races de chiens."
@@ -84,7 +103,7 @@ with tabs[3]:
         )
     with col2:
         st.markdown("<h3 style='text-align: center;'>Application/sport</h3>", unsafe_allow_html=True)
-        display_image("runappli.png", height=300, caption="Projet 1")
+        display_image("runappli.png", height=300, caption="Application permettant de faire des prédictions sur des courses")
         st.write("Application permettant de faire des prédictions sur des performances en course à pied")
         st.markdown(
         "[🔗 Accéder à l'application](https://predictioncourse-f2dha0fma0fdazgq.canadacentral-01.azurewebsites.net//)",

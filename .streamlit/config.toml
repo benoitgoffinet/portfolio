@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#1E90FF"          # Bleu assez vif pour boutons / sliders
+backgroundColor = "#FFFFFF"       # Fond blanc (très lisible)
+secondaryBackgroundColor = "#F5F5F5"  # Fond des encadrés, gris clair
+textColor = "#000000"             # Texte noir pour contraste maximal
+font = "sans serif"
