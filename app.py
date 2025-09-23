@@ -24,7 +24,7 @@ tabs = st.tabs(["Présentation", "Formation/Expériences", "Compétences", "Proj
 # --- Onglet 1 : Présentation ---
 with tabs[0]:
     st.markdown("<h1 style='text-align: center;'>Bonjour, je m'appelle Benoit Goffinet et je suis Data Scientist</h1>", unsafe_allow_html=True)
-    st.image("benoitgoffinet.png", caption='image me représentant', width=200)
+    st.image("benoitgoffinet.png", width=200)
     st.markdown("""
     Passionné par le sport et la data science, je souhaite partager mon parcours et mes compétences.
     
@@ -92,7 +92,7 @@ with tabs[3]:
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("<h3 style='text-align: center;'>Dashboard</h3>", unsafe_allow_html=True)
-        display_image("dashboard.png", height=300, caption="Dashboard comparant les modèles VIT et VGG16")
+        display_image("dashboard.png", height=300)
         st.write(
           "Dashboard permettant de comparer les performances des modèles **VIT** "
           "et **VGG16** sur un jeu de données contenant des races de chiens."
@@ -103,7 +103,7 @@ with tabs[3]:
         )
     with col2:
         st.markdown("<h3 style='text-align: center;'>Application/sport</h3>", unsafe_allow_html=True)
-        display_image("runappli.png", height=300, caption="Application permettant de faire des prédictions sur des courses")
+        display_image("runappli.png", height=300)
         st.write("Application permettant de faire des prédictions sur des performances en course à pied")
         st.markdown(
         "[🔗 Accéder à l'application](https://predictioncourse-f2dha0fma0fdazgq.canadacentral-01.azurewebsites.net//)",
